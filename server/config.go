@@ -28,6 +28,7 @@ type Config struct {
 	Vault struct {
 		Address      string `yaml:"address"`
 		CACertPath   string `yaml:"ca_cert_path"`
+		Insecure     bool   `yaml:"insecure"`
 		UserPassPath string `yaml:"userpass_path"`
 		KvMountPath  string `yaml:"kv_mount_path"`
 		TransitPath  string `yaml:"transit_path"`
@@ -46,6 +47,7 @@ func (c *Config) setDefaultValues() {
 	c.HttpServer.TLSCertFile = "cert.pem"
 	c.HttpServer.TLSKeyFile = "key.pem"
 	c.Vault.Address = "http://localhost:8200"
+	c.Vault.Insecure = false
 	c.Vault.UserPassPath = "userpass"
 	c.Vault.TransitPath = "transit"
 	c.Vault.KvMountPath = "kv"

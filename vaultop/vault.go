@@ -25,7 +25,7 @@ type Vault struct {
 	// CA path of vault
 	CaCertPath string
 
-	// CA path of vault
+	// Enable Insecure HTTPS communication
 	Insecure bool
 
 	// UserPassPath is the path to the userpass authentication backend in Vault.

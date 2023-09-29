@@ -17,6 +17,8 @@ func basicAuth(handler http.HandlerFunc) http.HandlerFunc {
 		// Initialize the vault client outside of the function
 		var vaultClient = &vaultop.Vault{
 			Address:     config.Vault.Address,
+			CaCertPath:  config.Vault.CACertPath,
+			Insecure:    config.Vault.Insecure,
 			KvMountPath: config.Vault.KvMountPath,
 			TransitPath: config.Vault.TransitPath,
 			Logger:      logger,
