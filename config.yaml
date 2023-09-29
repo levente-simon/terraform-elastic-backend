@@ -1,5 +1,5 @@
 elasticsearch:
-  ca_cert_path: "/Users/leventesimon/dev/elastic/elasticsearch-8.9.0/config/certs/http_ca.crt"
+  ca_cert_path: "/path/to/http_ca.crt"
 http_server:
   http_address: ":8080"
 vault:
